@@ -1,13 +1,24 @@
 ﻿using MediatR;
+using Microsoft.Extensions.Caching.Hybrid;
+using System.Threading;
 using TaskApplication.Common.Interfaces;
 using TaskApplication.Tasks.Commands;
 
 namespace TaskApplication.Tasks.Handlers
 {
+    /// <summary>
+    /// Handler to create tasks
+    /// </summary>
     public class CreateTasksCommandHandler : IRequestHandler<CreateTaskCommand, int>
     {
         private readonly ITaskDbContext _context;
-        public CreateTasksCommandHandler(ITaskDbContext context) => _context = context;
+        private readonly HybridCache _hybridCache; 
+
+        public CreateTasksCommandHandler(ITaskDbContext context, HybridCache hybridCache) 
+        {
+            _context = context;
+            _hybridCache = hybridCache;
+        }
 
         /// <summary>
         /// Method to create new tasks and store them in the postgres db
@@ -32,6 +43,9 @@ namespace TaskApplication.Tasks.Handlers
 
             _context.Tasks.Add(entity);
             await _context.SaveChangesAsync(ct);
+
+            await _hybridCache.RemoveAsync("tasks-all", ct);
+
             return entity.Id;
 
         }

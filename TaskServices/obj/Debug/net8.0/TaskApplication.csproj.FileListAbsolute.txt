@@ -9,10 +9,10 @@ C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.AssemblyInfoInputs.cache
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.AssemblyInfo.cs
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.csproj.CoreCompileInputs.cache
+C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.sourcelink.json
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskAppl.EBD2A7B8.Up2Date
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.dll
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\refint\TaskApplication.dll
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.pdb
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.genruntimeconfig.cache
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\ref\TaskApplication.dll
-C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.sourcelink.json

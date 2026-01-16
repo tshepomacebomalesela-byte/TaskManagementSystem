@@ -7,6 +7,7 @@ using TaskApplication.Common.Interfaces;
 using TaskApplication.Tasks.Commands;
 using TaskApplication.Tasks.Handlers;
 using TaskDomain;
+using TaskManagementTests.Helpers;
 
 
 public class UpdateTaskCommandHandlerTests
@@ -48,7 +49,9 @@ public class UpdateTaskCommandHandlerTests
     [Fact]
     public async System.Threading.Tasks.Task Handle_Should_Update_Task_When_Task_Exists()
     {
-        var handler = new UpdateTaskCommandHandler(_mockContext.Object);
+        var passthroughCache = new PassthroughHybridCache();
+
+        var handler = new UpdateTaskCommandHandler(_mockContext.Object, passthroughCache);
         var command = new UpdateTaskCommand(1, "New Name", "New Desc", 2);
 
         var result = await handler.Handle(command, CancellationToken.None);
@@ -61,7 +64,9 @@ public class UpdateTaskCommandHandlerTests
     [Fact]
     public async System.Threading.Tasks.Task Handle_Should_Return_False_When_Task_Does_Not_Exist()
     {
-        var handler = new UpdateTaskCommandHandler(_mockContext.Object);
+        var passthroughCache = new PassthroughHybridCache();
+
+        var handler = new UpdateTaskCommandHandler(_mockContext.Object, passthroughCache);
         var command = new UpdateTaskCommand(99, "Name", "Desc", 1);
 
         var result = await handler.Handle(command, CancellationToken.None);

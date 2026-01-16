@@ -9,6 +9,9 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 namespace TaskApplication.Tasks.Handlers
 {
+    /// <summary>
+    /// Handler to get tasks by Id
+    /// </summary>
     public class GetTaskByIdQueryHandler : IRequestHandler<GetTaskByIdQuery, TaskDTO?>
     {
         private readonly ITaskDbContext _context;

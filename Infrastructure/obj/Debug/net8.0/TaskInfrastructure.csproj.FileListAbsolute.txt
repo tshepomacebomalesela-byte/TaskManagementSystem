@@ -10,9 +10,9 @@ C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\o
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.AssemblyInfoInputs.cache
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.AssemblyInfo.cs
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.csproj.CoreCompileInputs.cache
+C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.sourcelink.json
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfr.3C95B695.Up2Date
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.dll
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\refint\TaskInfrastructure.dll
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.pdb
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\ref\TaskInfrastructure.dll
-C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.sourcelink.json

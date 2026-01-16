@@ -5,6 +5,7 @@ using TaskApplication.Tasks.Commands;
 using TaskApplication.Tasks.Handlers;
 using TaskApplication.Common.Interfaces;
 using TaskDomain;
+using TaskManagementTests.Helpers;
 
 public class CreateTaskCommandHandlerTests
 {
@@ -32,15 +33,15 @@ public class CreateTaskCommandHandlerTests
 
         _mockContext.Setup(c => c.Tasks).Returns(mockDbSet.Object);
         _mockContext.Setup(c => c.Status).Returns(mockStatusSet.Object);
-
-        _handler = new CreateTasksCommandHandler(_mockContext.Object);
     }
 
     [Fact]
     public async void Handle_Should_Add_Task_To_Database()
     {
+        var passthroughCache = new PassthroughHybridCache();
+
         var command = new CreateTaskCommand("Test Task", "Desc", 1);
-        var handler = new CreateTasksCommandHandler(_mockContext.Object);
+        var handler = new CreateTasksCommandHandler(_mockContext.Object, passthroughCache);
 
         await handler.Handle(command, default);
 
@@ -51,8 +52,10 @@ public class CreateTaskCommandHandlerTests
     [Fact]
     public async void Handle_Should_Faile_To_Add_Task_To_Database_With_Incorrect_Status()
     {
+        var passthroughCache = new PassthroughHybridCache();
+
         var command = new CreateTaskCommand("Test Task", "Desc", 5);
-        var handler = new CreateTasksCommandHandler(_mockContext.Object);
+        var handler = new CreateTasksCommandHandler(_mockContext.Object, passthroughCache);
 
         await Assert.ThrowsAsync<InvalidOperationException>(() =>
          handler.Handle(command, CancellationToken.None));

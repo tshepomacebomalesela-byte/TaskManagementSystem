@@ -9,6 +9,9 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 namespace TaskApplication.Tasks.Handlers
 {
+    /// <summary>
+    /// Handler to get all tasks
+    /// </summary>
     public class GetAllTasksQueryHandler : IRequestHandler<GetAllTasksQuery, List<TaskDTO>>
     {
         private readonly ITaskDbContext _context;

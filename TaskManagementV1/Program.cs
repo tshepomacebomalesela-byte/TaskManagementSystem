@@ -18,11 +18,13 @@ builder.Services.AddDbContext<TaskDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
         b => b.MigrationsAssembly("TaskInfrastructure")));
 
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.Configuration = builder.Configuration.GetConnectionString("Redis");
-    options.InstanceName = "TaskManagement_";
-});
+//builder.Services.AddStackExchangeRedisCache(options =>
+//{
+//    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+//    options.InstanceName = "TaskManagement_";
+//});
+builder.Services.AddDistributedMemoryCache();
+
 
 builder.Services.AddHybridCache(options =>
 {
