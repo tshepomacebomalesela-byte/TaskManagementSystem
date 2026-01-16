@@ -6,7 +6,6 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -21,10 +20,9 @@ builder.Services.AddDbContext<TaskDbContext>(options =>
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
-    options.InstanceName = "TaskManagement_"; // Best practice to prefix keys
+    options.InstanceName = "TaskManagement_";
 });
 
-// 2. Add HybridCache (L1 + L2)
 builder.Services.AddHybridCache(options =>
 {
     options.DefaultEntryOptions = new HybridCacheEntryOptions
@@ -40,7 +38,6 @@ builder.Services.AddApplication();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

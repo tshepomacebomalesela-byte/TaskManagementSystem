@@ -9,29 +9,22 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 namespace TaskApplication.Tasks.Handlers
 {
-    public class GetTaskByIdQueryHandler : IRequestHandler<GetTaskByIdQuery, TaskDTO?>
+    public class GetAllTasksQueryHandler : IRequestHandler<GetAllTasksQuery, List<TaskDTO>>
     {
         private readonly ITaskDbContext _context;
         private readonly IMapper _mapper;
         private readonly HybridCache _hybridCache;
 
-
-        public GetTaskByIdQueryHandler(ITaskDbContext context, IMapper mapper, HybridCache hybridCache)
+        public GetAllTasksQueryHandler(ITaskDbContext context, IMapper mapper, HybridCache hybridCache)
         {
             _context = context;
             _mapper = mapper;
             _hybridCache = hybridCache;
-
         }
-        /// <summary>
-        /// Method to retrieve task from cache if exists or database
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public async Task<TaskDTO?> Handle(GetTaskByIdQuery request, CancellationToken cancellationToken)
+
+        public async Task<List<TaskDTO>> Handle(GetAllTasksQuery request, CancellationToken cancellationToken)
         {
-            string cacheKey = $"task-{request.Id}";
+            const string cacheKey = "tasks-all";
 
             return await _hybridCache.GetOrCreateAsync(
                 cacheKey,
@@ -39,9 +32,8 @@ namespace TaskApplication.Tasks.Handlers
                 {
                     return await _context.Tasks
                         .AsNoTracking()
-                        .Where(t => t.Id == request.Id)
                         .ProjectTo<TaskDTO>(_mapper.ConfigurationProvider)
-                        .FirstOrDefaultAsync(token);
+                        .ToListAsync(token);
                 },
                 cancellationToken: cancellationToken
             );

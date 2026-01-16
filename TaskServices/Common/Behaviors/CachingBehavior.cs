@@ -1,11 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using TaskApplication.Common.Interfaces;
 
 namespace TaskApplication.Common.Behaviors
@@ -18,7 +13,7 @@ namespace TaskApplication.Common.Behaviors
         public CachingBehavior(IDistributedCache cache) => _cache = cache;
 
         /// <summary>
-        /// Method to handle the cashing of the tasks
+        /// Method to handle the caching of the tasks
         /// </summary>
         /// <param name="request"></param>
         /// <param name="next"></param>

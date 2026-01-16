@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
 namespace TaskApplication.Common.Interfaces
 {
     public interface ITaskDbContext

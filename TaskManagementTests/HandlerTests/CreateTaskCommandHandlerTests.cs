@@ -5,7 +5,6 @@ using TaskApplication.Tasks.Commands;
 using TaskApplication.Tasks.Handlers;
 using TaskApplication.Common.Interfaces;
 using TaskDomain;
-using Microsoft.EntityFrameworkCore;
 
 public class CreateTaskCommandHandlerTests
 {

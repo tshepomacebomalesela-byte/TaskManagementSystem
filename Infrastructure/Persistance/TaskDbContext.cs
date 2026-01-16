@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TaskApplication.Common.Interfaces;
 using TaskDomain;
+
 namespace TaskInfrastructure.Persistance
 {
     public class TaskDbContext : DbContext, ITaskDbContext

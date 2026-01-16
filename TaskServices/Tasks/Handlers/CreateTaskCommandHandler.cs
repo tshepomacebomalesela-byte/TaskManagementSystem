@@ -1,9 +1,4 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaskApplication.Common.Interfaces;
 using TaskApplication.Tasks.Commands;
 
@@ -14,6 +9,13 @@ namespace TaskApplication.Tasks.Handlers
         private readonly ITaskDbContext _context;
         public CreateTasksCommandHandler(ITaskDbContext context) => _context = context;
 
+        /// <summary>
+        /// Method to create new tasks and store them in the postgres db
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="ct"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
         public async Task<int> Handle(CreateTaskCommand request, CancellationToken ct)
         {
             if((request.StatusId<0 || request.StatusId>4) || string.IsNullOrEmpty(request.Name) || string.IsNullOrEmpty(request.Description))

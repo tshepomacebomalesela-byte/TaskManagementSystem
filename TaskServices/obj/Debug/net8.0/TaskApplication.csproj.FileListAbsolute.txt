@@ -15,3 +15,4 @@ C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.pdb
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.genruntimeconfig.cache
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\ref\TaskApplication.dll
+C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskServices\obj\Debug\net8.0\TaskApplication.sourcelink.json

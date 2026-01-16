@@ -15,3 +15,4 @@ C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\o
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\refint\TaskInfrastructure.dll
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.pdb
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\ref\TaskInfrastructure.dll
+C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\Infrastructure\obj\Debug\net8.0\TaskInfrastructure.sourcelink.json

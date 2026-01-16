@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using TaskApplication.Tasks.DTOs;
 
 namespace TaskApplication.Tasks.Queries
 {
-    public class GetAllTasksQuery
-    {
-    }
+    public record GetAllTasksQuery : IRequest<List<TaskDTO>>;
 }

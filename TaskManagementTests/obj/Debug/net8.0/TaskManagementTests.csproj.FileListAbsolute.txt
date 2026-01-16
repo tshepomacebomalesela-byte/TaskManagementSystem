@@ -200,3 +200,4 @@ C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskManagementTe
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskManagementTests\obj\Debug\net8.0\TaskManagementTests.pdb
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskManagementTests\obj\Debug\net8.0\TaskManagementTests.genruntimeconfig.cache
 C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskManagementTests\obj\Debug\net8.0\ref\TaskManagementTests.dll
+C:\Users\males\Documents\Assessments\XTND .NET BackEnd Engineer\TaskManagementTests\obj\Debug\net8.0\TaskManagementTests.sourcelink.json

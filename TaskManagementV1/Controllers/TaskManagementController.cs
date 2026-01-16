@@ -2,6 +2,7 @@
 using TaskApplication.Tasks.Commands;
 using MediatR;
 using TaskApplication.Tasks.Queries;
+using TaskApplication.Tasks.DTOs;
 
 
 namespace TaskManagementV1.Controllers
@@ -59,6 +60,19 @@ namespace TaskManagementV1.Controllers
             var result = await _sender.Send(query);
 
             return result != null ? Ok(result) : NotFound();
+        }
+
+        /// <summary>
+        /// Get all the tasks
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<ActionResult<List<TaskDTO>>> GetAll(CancellationToken ct)
+        {
+            var query = new GetAllTasksQuery();
+            var result = await _sender.Send(query, ct);
+            return Ok(result);
         }
     }
 }
