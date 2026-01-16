@@ -1,0 +1,29 @@
+# Ignore specific files
+.env
+config.php
+
+# Ignore entire folders (use a trailing slash)
+node_modules/
+dist/
+build/
+TaskManagementV1/.vs/
+TaskManagementV1/obj/
+TaskManagementV1/bin/
+
+
+TaskServices/obj/
+TaskServices/bin/
+TaskManagementTests/obj/
+TaskManagementTests/bin/
+
+Infrastructure/obj/
+Infrastructure/bin/
+
+Domain/obj/
+Domain/bin
+
+
+
+# Ignore all files with a certain extension
+*.log
+*.tmp
