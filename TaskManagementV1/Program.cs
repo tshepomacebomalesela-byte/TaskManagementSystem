@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TaskApplication;
 using TaskInfrastructure;
 using Microsoft.Extensions.Caching.Hybrid;
+using TaskManagementV1.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,10 @@ builder.Services.AddHybridCache(options =>
     };
 });
 
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
+
 builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddApplication();
@@ -47,6 +52,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseExceptionHandler();
+
 
 app.MapControllers();
 
