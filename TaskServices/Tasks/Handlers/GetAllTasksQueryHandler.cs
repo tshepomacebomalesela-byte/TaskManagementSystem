@@ -21,7 +21,12 @@ namespace TaskApplication.Tasks.Handlers
             _mapper = mapper;
             _hybridCache = hybridCache;
         }
-
+        /// <summary>
+        /// Returns all the tasks i the database
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<List<TaskDTO>> Handle(GetAllTasksQuery request, CancellationToken cancellationToken)
         {
             const string cacheKey = "tasks-all";

@@ -13,7 +13,12 @@ namespace TaskApplication.Tasks.Handlers
         {
             _context = context;
         }
-
+        /// <summary>
+        /// Updates a record in the database if found
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<bool> Handle(UpdateTaskCommand request, CancellationToken cancellationToken)
         {
             var entity = await _context.Tasks
